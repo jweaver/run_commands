@@ -95,15 +95,6 @@ fi
 # Useful for sharing files over the LAN.    >:-D.
 alias webshare='python -m SimpleHTTPServer'
 
-# Paths
-# Android added for droid development work.
-# Java path (probably not necessary).
-export PATH=${PATH}:/home/jw/Tools/sdk/android/android-sdk-linux_86/tools
-export PATH=${PATH}:/usr/bin/java
-export GPGKEY=8AA46955
-
-# Add Android adb for easy debug (logcat?) access.
-export PATH=${PATH}:/home/jw/Tools/sdk/android/android-sdk-linux_86/platform-tools/
 
 # Add autocd as standard, this allows changing directory without having to type
 # out "cd" every time.

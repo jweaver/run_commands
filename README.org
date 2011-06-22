@@ -1,0 +1,7 @@
+* Read Me
+This repo contains run commands (or runcom) rc files.
+
+- .bashrc
+  + Note that you will need python installed and have bash version 4 or greater.
+- .screenrc
+  + Contains mostly customizations I've found useful, nothing ground breaking though.

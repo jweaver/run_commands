@@ -1,0 +1,14 @@
+# Additions added over time as I come across them.
+# Latest modification: 16 JUN 2011
+
+# Change the hardstatus settings to give an window list at the bottom of the                                                                        
+# screen, with the time and date and with the current window highlighted                                                                            
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# Remove leftover content (text) on screen after an emacs quit
+altscreen on
+
+# Custom Keybindings
+escape ``
+

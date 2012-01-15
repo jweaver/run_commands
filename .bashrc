@@ -81,6 +81,7 @@ alias cd3="cd ../../.."
 alias cd4="cd ../../../.."
 alias cd5="cd ../../../../.."
 
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -113,14 +114,21 @@ shopt -s autocd
 export HISTFILESIZE=400000
 export HISTSIZE=100000
 
-# Ignore 'exit' from history, why not? :-P
+# Ignore 'exit' from history, personal preference
 export HISTIGNORE="&:[ ]*:exit"
+
+# CDPATH for quicker cd to common dirs, personal preference
+# TODO: Fix this to reference local .CDPATH file in $HOME
+export CDPATH=.:/home/jw/dev/weaverworx:/home/jw/Documents/school/usc
 
 # Append history on exit
 shopt -s histappend
 
 # Save multi-line commands to the history as 1 command
 shopt -s cmdhist
+
+# Enable some spellchecking for cd
+shopt -s cdspell
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace

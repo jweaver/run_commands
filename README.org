@@ -5,3 +5,8 @@ This repo contains run commands (or runcom) rc files.
   + Note that you will need python installed and have bash version 4 or greater.
 - .screenrc
   + Contains mostly customizations I've found useful, nothing ground breaking though.
+
+** Installation
+Since these are simple rc files, you can either copy/paste them or move them into your home directory to use.  Alternatively, you can symlink to the .bashrc and .screenrc files in this repo:
+- $ cd $HOME
+- $ ln -s /PATH-TO-THIS-REPO-CLONE/.bashrc .bashrc

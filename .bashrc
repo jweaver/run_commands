@@ -28,7 +28,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -42,9 +42,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # Colorized for git repos
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;37m\]\u@\h\[\033[00m\]:\[\033[33m\]$(__git_ps1 " (%s)")\[\033[01;34m\]\W\[\033[00m\]]\\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -70,8 +71,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -lF'
+alias la='ls -Al'
 alias l='ls -CF'
 
 # This is a really nutty way to chain "cd ..", but until I find a
@@ -98,9 +99,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Sexy as hell, lets make 'webshare' open up a simple HTTP server exposing the
-# current directory as a fileshare on port 8000.  NEEDS PYTHON!!
-# Useful for sharing files over the LAN.    >:-D.
+# Useful for sharing files over a LAN, requires python but opens simple file
+# server on current directory.
 alias webshare='python -m SimpleHTTPServer'
 
 
@@ -119,7 +119,7 @@ export HISTIGNORE="&:[ ]*:exit"
 
 # CDPATH for quicker cd to common dirs, personal preference
 # TODO: Fix this to reference local .CDPATH file in $HOME
-export CDPATH=.:/home/jw/dev/weaverworx:/home/jw/Documents/school/usc
+export CDPATH=::.:~:/home/jw/dev/weaverworx:/home/jw/Documents/school/usc:/home/jw/
 
 # Append history on exit
 shopt -s histappend
@@ -133,3 +133,6 @@ shopt -s cdspell
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
+
+# git completion
+source ~/dev/weaverworx/github/run_commands/gitcompletion/git-completion.bash

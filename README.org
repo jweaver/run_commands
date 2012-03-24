@@ -10,3 +10,7 @@ This repo contains run commands (or runcom) rc files.
 Since these are simple rc files, you can either copy/paste them or move them into your home directory to use.  Alternatively, you can symlink to the .bashrc and .screenrc files in this repo:
 - $ cd $HOME
 - $ ln -s /PATH-TO-THIS-REPO-CLONE/.bashrc .bashrc
+
+Change the location of the gitcompletion (git-completion.bash) file accordingly, and reference it from .bashrc. git-completion.bash Forked originally from git repo at https://github.com/git/git.  Alternatively, delete the git-completion.bash file and run $ wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash for a fresh version.
+
+- Note:  I have not changed some local references, so use at risk, modification will be necessary.

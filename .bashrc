@@ -71,7 +71,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -lF'
+alias ll='ls -laF'
 alias la='ls -Al'
 alias l='ls -CF'
 
@@ -119,7 +119,7 @@ export HISTIGNORE="&:[ ]*:exit"
 
 # CDPATH for quicker cd to common dirs, personal preference
 # TODO: Fix this to reference local .CDPATH file in $HOME
-export CDPATH=::.:~:/home/jw/dev/weaverworx:/home/jw/Documents/school/usc:/home/jw/
+# export CDPATH=::.:~:/home/jw/dev/weaverworx:/home/jw/Documents/school/usc:/home/jw/
 
 # Append history on exit
 shopt -s histappend
@@ -135,4 +135,4 @@ shopt -s cdspell
 HISTCONTROL=ignoredups:ignorespace
 
 # git completion
-source ~/dev/weaverworx/github/run_commands/gitcompletion/git-completion.bash
+source ~/development/weaverworx/github/run_commands/gitcompletion/git-completion.bash

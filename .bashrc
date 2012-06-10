@@ -71,8 +71,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -laF'
-alias la='ls -Al'
+alias ll='ls -lF'
+alias la='ls -al'
 alias l='ls -CF'
 
 # This is a really nutty way to chain "cd ..", but until I find a
@@ -135,4 +135,15 @@ shopt -s cdspell
 HISTCONTROL=ignoredups:ignorespace
 
 # git completion
-source ~/development/weaverworx/github/run_commands/gitcompletion/git-completion.bash
+source /home/jw/development/weaverworx/github/run_commands/gitcompletion/git-completion.bash
+
+# Java Home
+JAVA_HOME=/usr/lib/jvm/jdk1.6.0_32
+export JAVA_HOME
+PATH=$PATH:$JAVA_HOME/bin
+export PATH
+
+
+# Android
+export ANDROID_HOME=/home/jw/development/tools/sdks/android-sdk-linux-r18
+export ANDROID_NDK_HOME=/home/jw/development/tools/sdks/android-ndk-r8

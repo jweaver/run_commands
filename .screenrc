@@ -1,8 +1,9 @@
 # Additions added over time as I come across them.
-# Latest modification: 16 JUN 2011
+# Latest modification: 21 JUL 2018
 
-# Change the hardstatus settings to give an window list at the bottom of the                                                                        
-# screen, with the time and date and with the current window highlighted                                                                            
+# Change the hardstatus settings to give an window list at the bottom of the
+# screen, with the time and date and with the current window highlighted
+
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
 
@@ -12,3 +13,16 @@ altscreen on
 # Custom Keybindings
 escape ``
 
+# Set some sane defaults, like a big scrollback, etc.
+defscrollback 20000
+startup_message off
+
+# navigating regions with Ctrl-arrows
+bindkey "^[[1;5D" focus left
+bindkey "^[[1;5C" focus right
+bindkey "^[[1;5A" focus up
+bindkey "^[[1;5B" focus down
+
+# Set zsh as default shell
+shell -$SHELL
+defshell -zsh

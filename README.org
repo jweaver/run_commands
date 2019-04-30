@@ -7,6 +7,10 @@ This repo contains run commands (or runcom) rc files.
 - ~.screenrc~
   + Contains mostly customizations I've found useful, nothing ground
     breaking though.
+  + **Now with zsh support**.  Running this as well as additional
+    ~.zshrc~ file will help with screen prompt titles.
+- ~.zshrc~
+  + Basic config, with some additional parts for emacs and screen.
 
 ** Installation
 Since these are simple rc files, you can either copy/paste them or
